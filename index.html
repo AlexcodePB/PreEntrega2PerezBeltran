@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inelar S.R.L</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- en esta seccion del codigo aplique algunos cambios en el header para agregarle unas animaciones y hacer responsive el mismo -->
+
+    <header id="navbar">
+        <!-- Logo -->
+
+        <div class="container-logo">
+            <div class="logo">
+                <img src="./img/Picture1.svg" alt="">
+                <a href="./index.html">INELAR</a>
+            </div>
+        </div>
+
+        <!-- nav -->
+
+        <nav class="paginas">
+            <div class="nav-container">
+                <label for="menu" class="nav-label">
+                    <img src="./assets/menu.svg" class="nav-img" alt="">
+                </label>
+                <input type="checkbox" id="menu" class="nav-input">
+                <div class="nav-menu">
+                    <a href="./index.html" class="nav-item">HOME</a>
+                    <a href="./html/nosotros.html" class="nav-item">NOSOTROS</a>
+                    <a href="./html/obras.html" class="nav-item">OBRAS</a>
+                    <a href="./html/productos.html" class="nav-item">PRODUCTOS</a>
+                    <a href="./html/contactanos.html" class="nav-item">CONTACTANOS</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- en esta parte voy a aplicar los grid con bootstrap -->
+
+    <section id="hero">
+        <div class="container-fluid text-center">
+            <div class="row align-items-end">
+                <div class="col">
+                    <div class="img-fondo">
+                        <div class="texto-img">
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab nam quibusdam fuga?</p>
+                        </div>
+                        <form action="./html/nosotros.html" >
+                            <button type="button"  class="btn btn-warning" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size:
+                                2rem;">
+                                +info
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-start mt-5 mb-5">
+                <div class="col-sm-4">
+                    <h3 class="text-start">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <div class="col-sm-8">
+                    <p class="text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, veritatis
+                        sapiente. Nam
+                        molestiae sunt
+                        ullam aliquam tempora ipsam quibusdam, reprehenderit temporibus accusamus, eveniet voluptates,
+                        voluptatum aperiam accusantium. Quidem odit alias, ex autem porro rerum repellendus, iste, animi
+                        mollitia beatae corporis perferendis deleniti provident nam amet!
+                    </p>
+                    <h5> "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi officiis vitae"
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/Projetos-Montagem-Manutencao-Redes-Hidrantes-Sprinklers.jpeg"" class="
+                                    d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/internacionalizacion de empresas (1).jpeg" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+
+            <a href="./index.html"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href=""></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-muted">HOME</a></li>
+                <li class="nav-item"><a href="./html/obras.html" class="nav-link px-2 text-muted">NOSOTROS</a></li>
+                <li class="nav-item"><a href="./html/obras.html" class="nav-link px-2 text-muted">OBRAS</a></li>
+                <li class="nav-item"><a href="./html/productos.html" class="nav-link px-2 text-muted">PRODUCTOS</a></li>
+                <li class="nav-item"><a href="./html/contactanos.html" class="nav-link px-2 text-muted">CONTACTANOS</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

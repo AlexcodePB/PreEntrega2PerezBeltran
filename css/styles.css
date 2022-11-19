@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+/* estilos en los textos */
+h1{font-size: 3.5em;}
+
+h2{font-size: 2.5em;}
+
+h3{font-size: 2em;}
+
+p{font-size: 1em;}
+
+/* en esta seccion cominzo las modificaciones de mi header para hacerlo responsive y darle algunas animaciones */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+
+
+/* en esta seccion del codigo vamos a darle forma al mi header */
+
+header{
+    font-family:'Roboto', sans-serif;
+    width: auto;
+    height: 65px;
+    background-color: rgb(245, 245, 245);
+}
+
+/* en esta seccion modificare lo que seria mi imagen y mi tipografia de mi logo */
+
+.container-logo .logo{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.container-logo .logo img{
+    width: 40px;
+    width: 40px;
+}
+
+.container-logo .logo a{
+    color: rgb(241, 182, 71);
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* en esta seccion vamos a modificar mi seccion paginas que corresponde al nav */
+
+.paginas .lista {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+}
+
+/* posicion de mis iconos en mi header */
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-label, .nav-input {
+    display: none;
+}
+
+.nav-menu{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav-item{
+    color: rgb(232, 161, 30);
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    
+}
+
+.nav-item::after{
+    content: "";
+    display: block;
+    background-color: rgb(247, 188, 78);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
+}
+
+.nav-item:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-input:checked + nav-menu{
+    background-color: orange;
+}
+
+@media (max-width: 900px){
+
+    /* en esta seccion del media modificare la posicion de mi logo para centrarlo  */
+    #navbar .container-logo{
+        width:  900px;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-label img{
+        margin-right: 40px;
+    }
+
+    #navbar .container-logo .logo{
+        padding-left: 80px;
+    }
+
+    #navbar .paginas{
+        width: 100px;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-item{
+        color: white;
+    }
+
+    .nav-item::after{
+        background-color: white;
+    }
+
+    .nav-label{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu{
+        position: fixed;
+        top: 65px;
+        bottom: 0;
+        background-color: rgb(233, 170, 52);
+        width: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav-input:checked + .nav-menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .texto-img h1, .texto-img p {
+        display: none;
+    }
+}
+
+
+
+
+
+/* estilos de hero */
+.texto-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-img h3{
+    width: fit-content;
+    height: fit-content;
+}
+
+.texto-img p{
+    width: 400px;
+    height: fit-content;
+}
+
+#hero .img-fondo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url("../img/hero.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;    
+}
+
+.texto-img h1, .texto-img p{
+    color: white;
+}
+
+
+#hero .img-info{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url("../img/sci-extincion-manguera.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+}
+
+
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+    justify-content: left;
+    font-size: 0.6em;
+    gap: 8px;
+    
+}
+#footer .contactanos{
+    text-align:center;
+    font-size: 0.6em;
+}
+
+#footer .footer-links{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 3px;
+}
+
+#hero .img-info h2{
+    width:500px;
+    height: fit-content;
+    color: aliceblue;
+    text-align: left;
+    display: flex;
+    justify-content: right;
+}
+
+#footer a{
+    color: black;
+}
+#footer a:hover{
+    color: blueviolet;
+}
+
+/* nosotros */
+#contenido-nosotros .container{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-color: aqua;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url("../img/formacion-planificación-de-obra-\(pmp\).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;   
+}
+
+/* texto en imagen de nosotros*/
+
+#contenido-nosotros .container h3{
+    width: fit-content;
+    height:fit-content;
+    padding: 12px 45px;
+}
+
+#contenido-nosotros .nosotros{
+    display: flex;
+    flex-direction: row;
+}
+
+#contenido-nosotros .nosotros .texto-centrado{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenido-nosotros .nosotros .texto{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
+#contenido-nosotros .nosotros .texto p{
+    width:25vw;
+    margin: 23px;
+}
+
+/* estilos de obras */
+
+#obras .container{
+    width: auto;
+    height: 80vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url(../img/obrasPlanificacion.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#obras .container .texto{
+    padding: 20%;
+    height: fit-content;
+    color: white;
+    text-align:center;
+}
+
+/* cartas */
+
+#cartas{
+    padding: 5%;
+    margin-top: 74px;
+    display: flex;
+    flex-direction: column;
+    gap: 59px;
+}
+
+#cartas .obra{
+    width: auto;
+    height: auto;
+    border: 3px solid rgb(155, 151, 151);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+#cartas .texto-obras{
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#cartas img{
+    padding: 23px;
+    width: 450px;
+    height: 320px;
+}
+/* productos */
+
+#productos .contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+#productos .contenedor img{
+    margin: 25px;
+    width: 500px;
+    height: 380px;
+}
+
+#productos .productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 34px;
+}
+
+#productos .contenedor .texto-contenedor{
+    padding-top: 80px;
+    text-align:left;
+    margin: 45px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#productos .productos img{
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+}
+
+.bg{
+    background-image: url(../img/detectores-de-humo.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
